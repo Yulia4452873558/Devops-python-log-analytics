@@ -21,6 +21,9 @@ An end-to-end DevOps log analytics pipeline built with Python, SQLite, Flask, an
                               ▼
 [ Nginx (Port 8080) ] ──► [ api_server.py (Port 5000) ] ──► [ telegram_alert.py ]
   (Reverse Proxy)              (Flask REST API)                 (Alerting Engine)
+```
+
+---
 
 🚀 Components
 
@@ -31,6 +34,8 @@ An end-to-end DevOps log analytics pipeline built with Python, SQLite, Flask, an
     Nginx Reverse Proxy (nginx_log_analytics.conf): Nginx server listening on port 8080 forwarding client requests to the Flask app on port 5000.
 
     Telegram Alert Engine (telegram_alert.py): Queries SQLite for 500 HTTP errors and dispatches alerts via Telegram Bot API.
+
+---
 
 💻 Quick Start & Testing
 1. Run Log Parser & Populate SQL DB
