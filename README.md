@@ -26,6 +26,8 @@ An end-to-end DevOps log analytics pipeline built with Python, SQLite, Flask, Ng
         └──────────────┬──────────────┘
                        ▼
             [ Docker Compose Stack ]
+
+```
 ---
 
 🚀 Components
