@@ -30,7 +30,7 @@ An end-to-end DevOps log analytics pipeline built with Python, SQLite, Flask, Ng
 ```
 ---
 
-🚀 Components
+## 🚀 Components
 
 1. Log Parser (log_parser.py): Regex-based parser that reads access.log and populates the SQLite database (access_logs table).
 
@@ -44,7 +44,7 @@ An end-to-end DevOps log analytics pipeline built with Python, SQLite, Flask, Ng
 
 ---
 
-💻 Quick Start & Testing
+## 💻 Quick Start & Testing
 1. Launch the entire containerized stack with 1 command:
 docker compose up -d
 
