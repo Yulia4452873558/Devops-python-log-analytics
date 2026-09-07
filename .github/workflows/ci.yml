@@ -11,21 +11,21 @@ jobs:
     name: Code Quality & Docker Check
     runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  - name: Setup-python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.11'
+      - name: Setup-python
+        uses: actions/setup-python@v4
+        with:
+        python-version: '3.11'
 
-  - name: Check Python Syntax
-    run: |
-      python -m py_compile log_parser.py
-      python -m py_compile api_server.py
-      python -m py_compile telegram_alert.py
+      - name: Check Python Syntax
+        run: |
+          python -m py_compile log_parser.py
+          python -m py_compile api_server.py
+          python -m py_compile telegram_alert.py
 
-  - name: Check Docker Compose Config
-    run: |
-      docker compose config
+      - name: Check Docker Compose Config
+        run: |
+          docker compose config
