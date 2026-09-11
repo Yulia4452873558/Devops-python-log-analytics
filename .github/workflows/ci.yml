@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -38,4 +38,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yuliashevtsova/devops-python-log-analytics:latest
+          tags: yulia4452873558/devops-python-log-analytics:latest
