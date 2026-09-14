@@ -1,0 +1,28 @@
+---
+- name: Deploy Log Analytics Microservice Stack
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Create project directory in home folder
+      file:
+        path: /home/yulia/log_analytics
+        state: directory
+        mode: '0755'
+
+    - name: Copy docker-compose and source files
+      copy:
+        src: "{{ item }}"
+        dest: /home/yulia/log_analytics/
+      loop:
+        - docker-compose.yml
+        - Dockerfile
+        - api_server.py
+        - log_parser.py
+        - access.log
+        - nginx_log_analytics.conf
+
+    - name: Run docker compose up in production
+      community.docker.docker_compose_v2:
+        project_src: /home/yulia/log_analytics
+        state: present
